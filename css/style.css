@@ -1,0 +1,303 @@
+/* Variables */
+:root {
+  --main-color: #fcb3b0;
+  --secondary-color: #fcf4f4;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7em;
+  color: #4d4d4d;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:  "header header"
+                        "main sidebar-main"
+                        "footer footer";
+}
+
+header { grid-area: header;}
+section { grid-area: main;}
+aside { grid-area: sidebar-main;}
+footer { grid-area: footer;}
+
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h4 {
+  font-family: 'Lora', serif;
+  padding-bottom: 20px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-size: 4.18em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: .75em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+p .small {
+  font-size: .75em;
+}
+
+p .large {
+  font-size: 1.31em;
+}
+
+/* Utility Classes */
+.container {
+  margin: auto;
+  max-width: 900px;
+  overflow: auto;
+  padding-bottom: 0 100px;
+}
+
+.container-sidebar {
+  margin: auto;
+  max-width: 500px;
+  overflow: auto;
+  padding-bottom: 0 10px;
+}
+
+.hr {
+  background: var(--secondary-color);
+  height: 4px;
+}
+
+.hr-sidebar {
+  background: #dbdbdb;
+  height: 1px;
+}
+
+.py {margin-top: 40px;}
+
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #4d4d4d;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: #4d4d4d;
+}
+
+/* Main Nav */
+#main-nav {
+  background: var(--main-color);
+  height: 100%;
+  padding: 20px 0;
+}
+
+#main-nav .menu {
+  display: table;
+  margin: 0 auto;
+}
+
+#main-nav ul {
+  list-style: none;
+  float: left;
+}
+
+#main-nav ul li {
+  display: inline;
+  text-transform: uppercase;
+}
+
+#main-nav ul li:nth-child(1),
+#main-nav ul li:nth-child(2),
+#main-nav ul li:nth-child(3){
+  padding-right: 30px;
+}
+
+#main-nav ul li a {
+  color: #fff;
+}
+
+#main-nav ul li a:hover {
+  color: #4d4d4d;
+}
+
+#main-nav ul li a:visited {
+  color: #fff;
+}
+
+/* Showcase */
+#showcase {
+  background: var(--secondary-color);
+  height: 100%;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* Sidebar */
+aside#sidebar {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  padding: 5px 40px 0 0;
+}
+
+aside#sidebar .sidebar-content {
+  width: 100%;
+  padding: 5px;
+}
+
+aside#sidebar .sidebar-content h4{
+  background: var(--secondary-color);
+  padding: 15px 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+aside#sidebar img {
+  width: 100%;
+}
+
+p.sidebar-sub-title {
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+
+aside#sidebar form {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+aside#sidebar form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+  background: #f9f9f9;
+}
+
+aside#sidebar form input:focus{
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+aside#sidebar .social-media {
+  display: table;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+aside#sidebar .social-media ul {
+  list-style: none;
+  float: left;
+}
+
+aside#sidebar .social-media ul li {
+  display: inline;
+}
+
+aside#sidebar .social-media ul li:nth-child(1),
+aside#sidebar .social-media ul li:nth-child(2) {
+  padding-right: 20px;
+}
+
+aside#sidebar .list ul {
+  list-style: none;
+}
+
+aside#sidebar .list ul li a,
+aside#sidebar .list ul li a:visited {
+  color: #4d4d4d;
+}
+
+aside#sidebar .list ul li a:hover {
+  color: var(--main-color);
+}
+
+/* Main-col */
+article.post {
+  /* float: left;
+  width: 65%; */
+  padding: 20px 10px 30px 10px;
+  text-align: center;
+}
+ 
+article.post img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+article.post p {
+  padding: 20px 0;
+}
+
+article.post a {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+/* Post */
+#main article .full-article {
+  text-align: left;
+}
+
+#main form {
+  padding-bottom: 80px;
+}
+
+#main .form-group{
+  margin-bottom: 20px;
+}
+
+#main input,
+#main textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+  background: #f9f9f9;
+}
+
+#main h4.comment {
+  padding: 40px 0 40px 0;
+}
+
+
+/* Footer */
+#main-footer {
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  height: 100%;
+  width: 100%;
+  
+}

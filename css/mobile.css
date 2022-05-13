@@ -1,0 +1,39 @@
+.blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:  "header"
+                        "main"
+                        "sidebar-main"
+                        "footer";
+}
+
+/* Main Nav */
+#main-nav {
+  height: 100%;
+  text-align: center;
+}
+
+#main-nav ul {
+  float: none;
+}
+
+#main-nav ul li {
+  display: block;
+  padding-bottom: 10px;
+}
+
+#main-nav ul li:nth-child(1),
+#main-nav ul li:nth-child(2),
+#main-nav ul li:nth-child(3){
+  padding-right: 0;
+}
+
+/* Showcase */
+#showcase {
+  padding: 60px 0 60px 0;
+}
+
+/* Sidebar */
+aside#sidebar {
+  padding: 5px 20px 0 20px;
+}
